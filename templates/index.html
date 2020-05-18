@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> corona virus </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+  <style media="screen">
+  body{
+    background-image: url("/static/header.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: "Times New Roman";
+    font-size: 22px;
+  }
+  .text{
+    font-family: "Times New Roman";
+    font-size: 40px;
+  }
+
+.footer {
+    position:relative;
+    left: 0;
+    margin-top: 7%;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+  .container{
+    margin-top: 5%;
+  }
+
+  </style>
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-dark justify-content-center" style="background-color: #000000;">
+          <span class="navbar-brand text">CORONA  PREDICTOR</span>
+    </nav>
+
+    <div class="container  pt-3">
+      <div class="row">
+
+        <div class="col-md-4   ">
+             <div class="card ">
+                 <img class="card-img-top " src="/static/photo6.jfif">
+             </div>
+        </div>
+
+        <div class="col-md-8   px-5 py-1 "  >
+                <h1 class=" py-1"><b>Fill Patient Details</b></h1>
+
+                <form  class="form" action='/predict' method="POST">
+                       <div class="form-group ">
+                            <input type="text" class="form-control" name="age" placeholder="Enter age ( eg. 30)" required="required">
+                       </div>
+
+                       <div class="form-group ">
+                            <input type="text" class="form-control" name="fever"  placeholder="Enter fever (eg. 100)" required="required">
+                       </div>
+
+                       <div class="form-group ">
+                            <select class="form-control " name="cold" >
+                                <option selected>Have you cold...?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                       </div>
+
+                       <div class="form-group">
+                            <select class="form-control" name="pain" >
+                                <option selected>Have you Body pain...?</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                           </select>
+                      </div>
+
+                      <div class="form-group ">
+                           <select  class="form-control" name="breath" required="required" >
+                               <option selected>Have you difficulties when you breath...?</option>
+                               <option value="1">Yes</option>
+                               <option value="0">No</option>
+                           </select>
+                      </div>
+
+                          <button type="submit"   class="btn btn-primary ">Submit</button>
+
+             </form>
+
+        </div>
+    </div>
+  </div>
+
+
+  <div class="footer ">
+         <p >  Designed & Developed by | Rahul |
+         <a style="color:#fff;" href="https://www.linkedin.com/in/rahul-kumar-ba015816b/"> <i class="fab fa-linkedin "></i>  </a>
+         <a style="color:#fff;" href="https://github.com/rahulkumar353"> <i class="fab fa-github"></i>  </a>
+      </p>
+  </div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
